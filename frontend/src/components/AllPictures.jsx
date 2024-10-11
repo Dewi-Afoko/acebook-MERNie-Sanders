@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import Picture from "../../../api/models/pictures";
 import { getPictures } from "../services/pictures";
+import DisplayPictures from "./Picture";
 
 
 const AllPictures = ({ refresh, ...props }) => {
@@ -44,10 +44,12 @@ useEffect(() => {
         </button>
 
         {pictures.map((picture) => (
-        <Picture
-            picture={picture}
+        <DisplayPictures
+            title={picture.title}
+            url={picture.url}
             key={picture._id}
-            user={props.user}
+            user={picture.user}
+            alttext={picture.alttext}
 
         />
         ))}
