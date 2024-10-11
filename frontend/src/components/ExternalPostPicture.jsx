@@ -2,12 +2,14 @@ import { useState } from "react";
 import { createPicture, uploadToImgBB } from "../services/pictures";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import { useNavigate } from "react-router-dom";
 
 const ExternalPostPicture = () => {
     const [pictureFile, setPictureFile] = useState(null); // Note: File, not picture/url
     const [title, setTitle] = useState("");
     const [alttext, setAlttext] = useState("");
     const [uploading, setUploading] = useState(false);
+    const navigate = useNavigate();
 
     const handlePictureChange = (event) => setPictureFile(event.target.files[0]);
     const handleTitleChange = (event) => setTitle(event.target.value);
@@ -37,6 +39,7 @@ const ExternalPostPicture = () => {
         setPictureFile(null); // clears message field upon submit
         setTitle(""); // clears message field upon submit
         setAlttext(""); // clears message field upon submit
+        navigate(0);
     } catch (error) {
         console.error("Failed to upload image: ", error);
         alert("Failed to upload!");

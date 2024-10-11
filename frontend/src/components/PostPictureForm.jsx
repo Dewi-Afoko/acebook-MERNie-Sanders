@@ -3,6 +3,7 @@ import { createPicture } from "../services/pictures";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
+
 const PostPictureForm = () => {
   const [picture, setPicture] = useState("");
   const [title, setTitle] = useState("");
