@@ -27,10 +27,12 @@ export async function createComment(comment) {
 
   const user = JSON.parse(localStorage.getItem("user")); // gets user object from localStorage as object
   const post_id = localStorage.getItem("post_id"); // gets post_id from local storage
+  const picture_id = localStorage.getItem("picture_id");
 
   const payload = {
     comment: comment,
     post_id: post_id,
+    picture_id: picture_id,
     user: user.username,
   };
 

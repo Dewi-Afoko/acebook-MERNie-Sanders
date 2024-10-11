@@ -5,7 +5,25 @@ const PictureSchema = new mongoose.Schema({
     title: String, 
     alttext: String,
     user: String,
-}, { timestamps: true });
+    likes: {
+        count: { 
+        type: Number,
+        default: 0 
+        },
+        // liked_by: []
+        liked_by: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'User' // Array of user ids who liked the post
+        } 
+        ]
+    },
+    author: {
+        type: mongoose.Schema.Types.ObjectId, 
+        ref: 'User',  // Referencing the User model
+        required: false
+    }
+    }, { timestamps: true });
 
 
 const Picture = mongoose.model("Picture", PictureSchema);

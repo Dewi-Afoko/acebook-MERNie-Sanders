@@ -20,6 +20,7 @@ const CreateCommentForm = (props) => {
 
   const handleClick = () => {
     localStorage.setItem("post_id", props.post._id);
+    localStorage.setItem("picture_id", props.picture._id);
   };
 
   return (
