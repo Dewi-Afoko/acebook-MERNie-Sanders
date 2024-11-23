@@ -6,10 +6,12 @@ codebase you've inherited, as you work to **improve and extend** it.
 
 ### Structure
 
-This repo contains two applications:
-
-- A frontend React App
-- A backend api server
+📌 Tech Stack: 
+**MERN**
+MonogoDB/Mongoose
+Express
+React
+Node
 
 These two applications will communicate through HTTP requests, and need to be
 run separately.
