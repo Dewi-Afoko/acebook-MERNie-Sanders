@@ -6,14 +6,15 @@ codebase you've inherited, as you work to **improve and extend** it.
 
 ### Structure
 
-📌 Primary Tech Stack:
+📌 Primary Tech Stack: **MERN**
 
-**MERN**
+- MonogoDB/Mongoose
 
--MonogoDB/Mongoose
--Express
--React
--Node
+- Express
+
+- React
+
+- Node
 
 These two applications will communicate through HTTP requests, and need to be
 run separately.
